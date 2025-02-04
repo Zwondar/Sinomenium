@@ -1,0 +1,34 @@
+
+spring:
+  application:
+    name: Sinomenium
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sim
+    username: sim
+    password: 123456
+  servlet:
+    multipart:
+      max-file-size: 400MB
+      max-request-size: 800MB
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 1215349793@qq.com
+    password: dzqwctdvfuongffa
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+
+server:
+  tomcat:
+    connection-timeout: 300000
+
+sinomenium:
+  jwt:
+    user-secret-key: sinomeniumKey
+    user-ttl: 7200000
+    user-token-name: Token
